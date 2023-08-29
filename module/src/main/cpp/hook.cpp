@@ -111,7 +111,7 @@ uintptr_t find_pattern_in_module(const char* lib_name, const char* pattern) {
 
 
 
-bool destroy, setMaster, setMasterL, selectMap, changeMapL, destroyL, disconnectMe, reviveAuto, clone, noSkin;
+bool destroy, setMaster, setMasterL, selectMap, changeMapL, destroyL, disconnectMe, reviveAuto, cloneMe, noSkin;
 
 bool (*SetMasterClient) (void* masterClientPlayer);
 bool (*CloseConnection) (void* kickPlayer);
@@ -225,7 +225,7 @@ void Patches() {
     //Toggle
     PATCH_SWITCH("0x1A39F84", "600580D2", selectMap);
     PATCH_SWITCH("0x1413A04", "000080D2C0035FD6", changeMapL);
-    PATCH_SWITCH("0xDDD2E0", "21008052", clone);
+    PATCH_SWITCH("0xDDD2E0", "21008052", cloneMe);
     PATCH_SWITCH("0x1A7F820", "000080D2", noSkin);
     //PATCH
     PATCH("0x1AB1DA8", "C0035FD6");
@@ -272,7 +272,7 @@ void DrawMenu(){
                 if (ImGui::Button(OBFUSCATE("Revive 100"))) {
                     reviveAuto = true;
                 }
-                ImGui::Checkbox(OBFUSCATE("Clone"), &clone);
+                ImGui::Checkbox(OBFUSCATE("Clone"), &cloneMe);
                 ImGui::Checkbox(OBFUSCATE("No Skin"), &noSkin);
 
                 ImGui::EndTabItem();
