@@ -263,10 +263,9 @@ void DrawMenu(){
                 ImGui::Checkbox(OBFUSCATE("Change Map Loop"), &changeMapL);
                 if (ImGui::Button(OBFUSCATE("Disconnect Me"))) {
                     disconnectMe = true;
-
-                    ImGui::EndTabItem();
                 }
 
+                 ImGui::EndTabItem();
             }
             if (ImGui::BeginTabItem(OBFUSCATE("Player"))) {
                 if (ImGui::Button(OBFUSCATE("Revive 100"))) {
