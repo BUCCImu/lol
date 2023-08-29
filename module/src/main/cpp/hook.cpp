@@ -268,7 +268,7 @@ void DrawMenu(){
                 }
 
             }
-            if (imGui::BeginTabItem(OBFUSCATE("Player"))) {
+            if (ImGui::BeginTabItem(OBFUSCATE("Player"))) {
                 if (ImGui::Button(OBFUSCATE("Revive 100"))) {
                     reviveAuto = true;
                 }
