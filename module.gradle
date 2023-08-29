@@ -1,0 +1,9 @@
+ext {
+    moduleLibraryName = "zyCheatsHideIo"
+    magiskModuleId = "zyCheatsHideIo"
+    moduleName = "Hide.io Mod Menu - ZyCheats "
+    moduleAuthor = "BUCCI"
+    moduleDescription = "Mod Menu for Hide.io 35.0.0"
+    moduleVersion = "v1.0 (35.0.0)"
+    moduleVersionCode = 1
+}
