@@ -264,7 +264,7 @@ void DrawMenu(){
                 if (ImGui::Button(OBFUSCATE("Disconnect Me"))) {
                     disconnectMe = true;
 
-                    imGui::EndTabItem();
+                    ImGui::EndTabItem();
                 }
 
             }
@@ -275,7 +275,7 @@ void DrawMenu(){
                 ImGui::Checkbox(OBFUSCATE("Clone"), &clone);
                 ImGui::Checkbox(OBFUSCATE("No Skin"), &noSkin);
 
-                imGui::EndTabItem();
+                ImGui::EndTabItem();
             }
                 ImGui::EndTabBar();
             }
