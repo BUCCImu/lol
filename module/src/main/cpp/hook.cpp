@@ -336,3 +336,8 @@ void *hack_thread(void *arg) {
     }
     return nullptr;
 }
+__attribute__((constructor))
+void lib_main() {
+    pthread_t ptid;
+    pthread_create(&ptid, NULL, hack_thread, NULL);
+}
